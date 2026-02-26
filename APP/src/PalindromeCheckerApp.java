@@ -1,17 +1,22 @@
-public class PalindromeCheckerApp {
+import java.util.*;
 
-    public static void main(String[] args) {
+String input = "civic";
 
-        System.out.println("==============================================");
-        System.out.println("        PALINDROME CHECKER APP               ");
-        System.out.println("==============================================");
+Queue<Character> queue = new LinkedList<>();
+Stack<Character> stack = new Stack<>();
 
-        System.out.println("Application Name    : Palindrome Checker App");
-        System.out.println("Application Version : 1.0.0");
-
-        System.out.println("----------------------------------------------");
-        System.out.println("Application started successfully.");
-        System.out.println("Ready to proceed to next use case...");
-        System.out.println("==============================================");
-    }
+for (char c : input.toCharArray()) {
+        queue.add(c);
+    stack.push(c);
 }
+
+boolean isPalindrome = true;
+
+while (!queue.isEmpty()) {
+        if (!queue.remove().equals(stack.pop())) {
+isPalindrome = false;
+        break;
+        }
+        }
+
+        System.out.println("Is Palindrome? : " + isPalindrome);
