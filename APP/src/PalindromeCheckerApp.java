@@ -8,7 +8,6 @@ public class PalindromeCheckerApp {
         int length = input.length();
 
         for (int i = 0; i < length / 2; i++) {
-
             if (input.charAt(i) != input.charAt(length - 1 - i)) {
                 isPalindrome = false;
                 break;
