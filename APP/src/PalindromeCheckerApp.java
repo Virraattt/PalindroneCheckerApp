@@ -2,16 +2,17 @@ public class PalindromeCheckerApp {
 
     public static void main(String[] args) {
 
-        System.out.println("==============================================");
-        System.out.println("        PALINDROME CHECKER APP               ");
-        System.out.println("==============================================");
+        String input = "radar";
+        String reversed = "";
 
-        System.out.println("Application Name    : Palindrome Checker App");
-        System.out.println("Application Version : 1.0.0");
+        for (int i = input.length() - 1; i >= 0; i--) {
+            reversed += input.charAt(i);
+        }
 
-        System.out.println("----------------------------------------------");
-        System.out.println("Application started successfully.");
-        System.out.println("Ready to proceed to next use case...");
-        System.out.println("==============================================");
+        if (input.equals(reversed)) {
+            System.out.println(input + " is a Palindrome");
+        } else {
+            System.out.println(input + " is NOT a Palindrome");
+        }
     }
 }
