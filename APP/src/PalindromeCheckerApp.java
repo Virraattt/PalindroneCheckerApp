@@ -1,23 +1,14 @@
-import java.util.*;
-
 public class PalindromeCheckerApp {
 
     public static void main(String[] args) {
 
-        String input = "civic";
-
-        Queue<Character> queue = new LinkedList<>();
-        Stack<Character> stack = new Stack<>();
-
-        for (char c : input.toCharArray()) {
-            queue.add(c);
-            stack.push(c);
-        }
-
+        String input = "madam";
         boolean isPalindrome = true;
 
-        while (!queue.isEmpty()) {
-            if (!queue.remove().equals(stack.pop())) {
+        int length = input.length();
+
+        for (int i = 0; i < length / 2; i++) {
+            if (input.charAt(i) != input.charAt(length - 1 - i)) {
                 isPalindrome = false;
                 break;
             }
